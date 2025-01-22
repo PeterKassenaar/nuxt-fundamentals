@@ -1,0 +1,7 @@
+/* h2 now has global styling */
+h2 {
+    color: cornflowerblue;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
