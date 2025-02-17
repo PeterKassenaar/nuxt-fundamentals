@@ -6,3 +6,6 @@
       ex hic iure modi natus necessitatibus obcaecati omnis quaerat, quidem rem repudiandae sunt ullam vitae.</p>
   </div>
 </template>
+<script setup lang="ts">
+// some scripts for this page...
+</script>
