@@ -5,18 +5,23 @@ import {MovieApiResponse} from "@/models/MovieInterfaces";
 
 export default defineEventHandler(async (event) => {
     // deconstructing the name from the querystring. It is send as /api/movies?name=batman, or the like.
+    // The function getQuery() is defined in Nuxt. See https://nuxt.com/docs/guide/directory-structure/server for details.
     const {name} = getQuery(event)
 
     // private key. Don't expose this to outside world!
     const apiKey = 'f1f56c8e';
 
-    // compose the url to call
+    // compose the url to call. See details on expected format for this API at https://www.omdbapi.com/, Parameters
     const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${name}`
 
     // call and await the results
     const result = await $fetch<MovieApiResponse>(url)
-    console.log(result.Search); // debugging
+    console.log(result.Search); // debugging only. See console OF YOUR TERMINAL! (not the browser!)
 
-    // return results to the calling component. This one never knows which server was actually called.
-    return result.Search // NOTE: returning the .Search[] here, BECAUSE THIS API wraps the data in a Search[] array. Check YOUR API! Don't blindly return .Search in your calls.
+    // return results to the calling component.
+    // The component never knows which server was actually called.
+
+    // NOTE: returning the .Search[] here, BECAUSE THIS API wraps the data in a Search[] array.
+    // Check YOUR API! Don't blindly return .Search in your calls.
+    return result.Search
 })
