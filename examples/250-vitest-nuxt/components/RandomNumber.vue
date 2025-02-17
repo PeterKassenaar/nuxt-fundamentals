@@ -15,7 +15,7 @@ const refresh = () => num.value = getRandomNum()
   <p>Click to see a different random number. The number is stored in 'state' management using the Nuxt-specific <code>useState()</code>
     composable. The state is <strong>global</strong> to the Nuxt app, meaning we can retrieve the state in other
     components.</p>
-  <h2>{{ num }}</h2>
+  <h3>{{ num }}</h3>
   <button @click="refresh">Refresh</button>
 </template>
 
