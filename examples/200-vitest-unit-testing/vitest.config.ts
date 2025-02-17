@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       // Make sure aliases like '@' work in tests
       '@': path.resolve(__dirname, './'),
+      '~': path.resolve(__dirname, './'),
     },
   },
   test: {
