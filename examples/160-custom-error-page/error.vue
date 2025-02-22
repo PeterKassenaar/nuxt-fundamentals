@@ -1,6 +1,9 @@
 <!--error.vue-->
 <script setup lang="ts">
-const error = useError()
+// 1. using the `useError()` composable
+const error= useError()
+
+// 2. Clearing the error message
 const handleClear = () => {
   clearError({
     redirect: '/'

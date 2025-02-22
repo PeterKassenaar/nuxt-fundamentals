@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type {Post} from "~/types/Post";
 
-const route = useRoute()
-const id = route.params.id
+const route = useRoute();
+const id = route.params.id;
 
 // URL to fetch data from. This repetition can be avoided by using a store, or composable. But it works for now.
 const postDetail = `https://jsonplaceholder.typicode.com/posts/${id}`;
