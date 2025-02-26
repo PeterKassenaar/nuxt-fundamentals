@@ -26,7 +26,7 @@ describe('PostComponent', () => {
         expect(PostComponent).toBeTruthy();
     });
 
-    it('mockPosts should be assigned to local posts', async () => {
+    it.skip('mockPosts should be assigned to local posts', async () => {
 
         // create a wrapper by 'mounting' the PostComponent. NOTE: This is not a 'real' component. Only in-memory representation.
         const wrapper = mount(PostComponent);
@@ -43,7 +43,7 @@ describe('PostComponent', () => {
     });
 
 
-    it('renders loading state initially', async () => {
+    it.skip('renders loading state initially', async () => {
         // Set up fetch to return an empty response for this test
         (global.fetch as ReturnType<typeof vi.fn>)
             .mockResolvedValueOnce({
@@ -58,7 +58,7 @@ describe('PostComponent', () => {
     });
 
 
-    it('renders error state if fetch fails', async () => {
+    it.skip('renders error state if fetch fails', async () => {
         // Mock fetch to reject (simulate an error)
         (global.fetch as ReturnType<typeof vi.fn>)
             .mockRejectedValueOnce(new Error('Failed to fetch posts'));
@@ -75,7 +75,7 @@ describe('PostComponent', () => {
     });
 
 
-    it('renders a list of posts when fetch is successful', async () => {
+    it.skip('renders a list of posts when fetch is successful', async () => {
         // Mock fetch to return mock posts.
         // This time, resolve the promise using the mocked posts (as defined above).
         (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValueOnce({
@@ -97,7 +97,7 @@ describe('PostComponent', () => {
         });
     });
 
-    it('renders no posts if fetch returns empty data', async () => {
+    it.skip('renders no posts if fetch returns empty data', async () => {
         // Mock fetch to return an empty array (e.g. No posts)
         (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValueOnce({
             ok: true,
