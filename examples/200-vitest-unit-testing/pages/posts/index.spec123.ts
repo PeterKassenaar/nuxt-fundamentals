@@ -8,6 +8,7 @@ type PostComponentInstance = {
     posts: Post[];
 };
 
+
 // Mock data for testing
 const mockPosts = [
     {id: 1, title: 'Post 1', body: 'Content of Post 1'},

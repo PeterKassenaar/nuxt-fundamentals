@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
   test: {
+    reporters: ['verbose'],
     globals: true,
     environment: 'happy-dom', // Simulate a DOM-like environment for Vue testing
     // setupFiles: './vitest.setup.ts', // Optional setup file for global mocks if needed
